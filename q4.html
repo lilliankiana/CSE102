@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 11 Javascript Question</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Lab 11 Javascript Question</h1>
+			<br>
+			<div class="row">
+				<div class="col-md-4">
+					<img style="max-width:100%" src="https://ceclnx01.cec.miamioh.edu/~borrorkn/fall22-cse102/norm_tree.PNG" alt="tree and street in the fog" onmouseover="this.width=50;">
+					<p>Picture by Norm Krumpe</p>
+				</div> <!--end first col-->
+				<div class="col-md-4 text-center">
+					<p>Enter a numeric value:</p> 
+					<input id="number" type="text">
+					<br><br>
+					<input id="checkBtn" type="button" class="btn btn-primary" value="Click to Check">
+					<br><br>
+					<p>The value you entered is:</p>
+					<input id="posOrNeg" type="text">
+
+				</div> <!--end second col-->
+				<div class="col-md-4">
+					<img style="max-width:100%" src="https://pbs.twimg.com/media/EVBPgvQXgAcPGzN?format=jpg&name=large" alt="dog on Miami University seal" onclick="alert('Clicked!')">
+					<p>Picture by Norm Krumpe</p>
+				</div> <!--end third col-->
+			</div> <!--end row div-->
+		</div> <!--end container div-->
+
+	<script>
+		$(document).ready(function() {
+			$("#checkBtn").click(function() {
+				var number = $( "#number" ).val();
+				if (number > 0) {
+					var pos = 'Postive';
+					$("#posOrNeg").val(pos);
+				} else if (number == 0) {
+					var zero = 'Zero';
+					$("#posOrNeg").val(zero);
+				} else {
+					var neg = 'Negative';
+					$("#posOrNeg").val(neg);
+				}
+			});
+		});
+
+	</script>
+
+	</body>
+</html>
